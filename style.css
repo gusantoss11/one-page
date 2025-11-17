@@ -1,0 +1,676 @@
+/*
+Folha de estilo do site treslOriginals.com
+@author Gustavo Santos De Oliveira
+*/
+
+/* Layout ***************************/
+
+/* Variáveis */
+
+:root {
+    --cinzaEscuro: #4f4f4f;
+    --dourado: #DAA520;
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --cinzaClaro: #DCDCDC;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.flex3 {
+    display: flex;
+    flex-direction: column;
+}
+.flex5 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.flex6 {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* botão estilizado */
+.banner-btn {
+    display: inline-block;
+    background-color: var(--dourado);
+    color: var(--preto);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin: 15px 0px;
+}
+
+.banner-btn:hover {
+    background-color: var(--cinzaEscuro);
+    color: var(--branco);
+    transform: scale(1.05);
+}
+
+.card {
+    width: 340px;
+    height: 520px;
+    background-color: var(--cinzaClaro);
+    margin-top: 25px;
+    border: 2px solid var(--cinzaEscuro);
+    border-radius: 25px;
+    margin: 0 auto;
+    /*border-radius: 25px;*/
+
+}
+
+.card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    margin: 15px 0px;
+}
+
+.card p {
+    color: var(--cinzaEscuro);
+    text-align: left;
+    padding: 0px 10px 25px 10px;
+}
+
+#closet .btn {
+    display: inline-block;
+    background-color: var(--dourado);
+    color: var(--preto);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#wireframe h2 {
+    margin: 15px 0px;
+    font-size: 1.3rem;
+}
+
+/* Fim - Layout <<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* Smartphone portrait >>>>>>>>>>>>>>>>>> */
+
+/* Cabeçalho */
+header {
+    height: 55px;
+    background-color: var(--preto);
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+#check {
+    display: none;
+}
+
+label {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.75);
+    position: fixed;
+    top: 0px;
+    right: 15px;
+}
+
+nav ul {
+    list-style: none;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 65%;
+    right: -65%;
+    transition: all 0.5s;
+}
+
+/* ação para a caixa checkbox */
+/* quando selecionada mudar ul */
+#check:checked~ul {
+    top: 55px;
+    right: 0px;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid var(--cinzaEscuro);
+    text-align: right;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+/* Principal */
+main {
+    height: 50vh;
+    background: url(img/fundoooo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+main .container {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    color: var(--branco);
+    font-family: "open", sans-serif;
+    text-shadow: 0px 5px 10px var(--preto), 0px 10px 10px rgba(0, 0, 0, 0.15), 0px 15px 15px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: var(--dourado);
+    font-size: 1.85rem;
+    font-weight: 900;
+    text-shadow: 0px 5px 10px var(--preto), 0px 10px 10px rgba(0, 0, 0, 0.15), 0px 15px 15px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+
+/* Destaque */
+#destaque {
+    padding: 30px 5px;
+    background: url(./img/Chat.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#destaque .container {
+    flex-direction: column;
+}
+
+#hero {
+    text-align: center;
+}
+
+#hero img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 25px;
+}
+
+.hero-text h2 {
+    font-size: 1.6rem;
+    color: var(--preto);
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: var(--branco);
+}
+
+.topic {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.topic p {
+    margin-left: 15px;
+}
+
+/* Sobre */
+#sobre {
+    margin: 50px 10px;
+}
+
+#sobre .container {
+    flex-direction: column;
+}
+
+#video iframe{
+    margin: 20px 2px;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 16 / 9;
+    align-items: center;
+    border: none;
+}
+
+.about {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 16 / 9;
+    align-items: center;
+    border: none;
+    flex-direction: column;
+    display: flex;
+}
+
+/* Wireframe */
+
+#wireframe {
+    padding: 30px 5px;
+    background: url(./img/Chat.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#textoWire {
+    color: #fff;
+    padding: 0px 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#textoWire h2 {
+    margin-bottom: 10px;
+}
+
+#textoWire p {
+    margin-bottom: 40px;
+}
+
+#textoWire span {
+    display: none;
+
+}
+
+#qrcode {
+    display: none;
+    max-width: 200px;
+    min-width: 100px;
+
+}
+
+#qrcode img {
+    display: none;
+
+
+}
+
+
+#qrcode {
+    width: 200px;
+    height: auto;
+}
+
+.about {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 16 / 9;
+    align-items: center;
+    border: none;
+    flex-direction: column;
+    display: flex;
+}
+
+
+/* Cartões */
+#closet {
+    background-color: #3a3a3a;
+    padding: 50px 0px;
+}
+
+#closet .container {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* endereco */
+address {
+   padding: 30px 5px;
+    background: url(./img/Chat.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+address a {
+   text-decoration: none;
+   color: #ffffff;
+}
+
+address img {
+   padding-top: 15px;
+}
+
+address .container {
+   flex-direction: column;
+}
+
+#endereco {
+   padding-bottom: 30px;
+}
+
+#googlmaps iframe {
+   display: none;
+}
+
+#mapaicon {
+   display: none;
+}
+/*rodapé*/
+
+footer {
+    padding: 50px 0px;
+    background-color: var(--preto);
+    color: var(--branco);
+    text-align: center;
+}
+
+#social {
+    margin-bottom: 25px;
+}
+
+#copyright a {
+    text-decoration: none;
+    color: var(--bege);
+}
+
+
+
+/* Fim - Smartphone portrait <<<<<<<<<<<< */
+
+
+/* Smartphone landscape 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+*/
+@media (max-width: 575px){
+    #googlemaps {
+        display: none !important;
+    }
+}
+@media (min-width: 576px) {
+
+    /* Layout */
+    .container {
+        max-width: 540px;
+    }
+
+    /* Cabeçalho */
+    nav ul {
+        width: 40%;
+        right: -40%;
+    }
+
+    /* Principal */
+    main {
+        height: 75vh;
+    }
+
+    main h1 {
+        font-size: 2.75rem;
+    }
+
+    main h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Destaque */
+    #destaque {
+        padding: 50px 0px;
+    }
+
+    #destaque .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #hero {
+        text-align: left;
+    }
+
+    #hero img {
+        width: 200px;
+        height: 200px;
+        margin: 0px 30px 0px 0px;
+    }
+
+    .topic {
+        display: none;
+    }
+
+    /*wireframe*/
+    #wireframe {
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+    }
+
+    #wireframe span {
+        display: inline;
+    }
+
+    #qrcode {
+        display: inline;
+    }
+
+    #qrcode img {
+        width: 225px;
+        height: 225px;
+
+    }
+
+    .flex5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .autor {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+
+
+}
+
+/* Fim - Smartphone landscape <<<<<<<<<<< */
+
+
+/* Tablet portrait >>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 768px) {
+
+    /* Layout */
+    .container {
+        max-width: 720px;
+    }
+
+    /* Principal */
+    main h1 {
+        font-size: 3.9rem;
+    }
+
+    main h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Fim - Tablet portrait <<<<<<<<<<<<<<<< */
+
+
+/* Tablet landscape >>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 992px) {
+
+    /* Layout */
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Fim - Tablet landscape <<<<<<<<<<<<<<< */
+
+
+/* Notebook / PC >>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 1200px) {
+
+    /* Layout */
+    footer{
+        align-items: center;
+    }
+    .container {
+        justify-content: space-between;
+        max-width: 1140px;
+    }
+
+    /* Cabeçalho */
+    header {
+        height: 100px;
+    }
+
+    .logo img {
+        width: 194px;
+        height: 194px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a:hover {
+        color: var(--dourado);
+    }
+
+    /* Principal */
+    main {
+        height: 89vh;
+    }
+
+    #sobre .container{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #sobre-video iframe{
+        margin: 0px 0px 0x 50px;
+    }
+
+
+    /* Destaque */
+
+
+    #hero img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .topic {
+        display: flex;
+    }
+
+    #closet .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #qrcode img {
+        display: inline;
+    }
+
+    #wireframe .qrcode {
+        text-align: right;
+    }
+
+    #wireframe {
+       background-attachment: fixed;
+    }
+     /* endereco */
+
+   #googlmaps iframe {
+      display: inline;
+      width: 350px;
+      height: 300px;
+   }
+
+   address .container {
+   flex-direction: row-reverse;
+   justify-content: space-around;
+   }
+
+   #endereco a {
+      display: none;
+   }
+
+   #mapaicon {
+      display: inline;
+   }
+   .Containerflex2{
+    display: flex;
+   }
+
+}
+
+
+/* Fim - Notebook / PC <<<<<<<<<<<<<<<<<< */
+
+
+/* Full HD / 4K >>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 1400px) {
+
+    /* Layout */
+    .container {
+        max-width: 1320px;
+    }
+
+    /* Principal */
+    main h1 {
+        font-size: 6rem;
+    }
+
+    main h2 {
+        font-size: 4rem;
+    }
+    .flex6{
+        flex-direction: row-reverse;
+    }
+}
+
+/* Fim - Full HD / 4K <<<<<<<<<<<<<<<<<<< */
