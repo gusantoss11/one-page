@@ -75,12 +75,12 @@ body {
 }
 
 .card {
-    width: 340px;
+    width: 345px;
     height: 520px;
     background-color: var(--cinzaClaro);
     margin-top: 25px;
-    border: 2px solid var(--cinzaEscuro);
-    border-radius: 25px;
+    border: 5px solid var(--dourado);
+    border-radius: 30px;
     margin: 0 auto;
     /*border-radius: 25px;*/
 
@@ -338,11 +338,13 @@ main h2 {
 #closet {
     background-color: #3a3a3a;
     padding: 50px 0px;
+    
 }
 
 #closet .container {
     flex-direction: column;
     text-align: center;
+    gap: 50px;
 }
 
 /* endereco */
@@ -492,8 +494,13 @@ footer {
         padding-right: 100px;
     }
 
+    /*card*/
 
-
+    #closet .container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* Fim - Smartphone landscape <<<<<<<<<<< */
